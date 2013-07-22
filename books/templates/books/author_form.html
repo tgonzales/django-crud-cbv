@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Cadastrar Autor</h1><br>
+
+<form action='.' method='post'>
+	{% csrf_token %}
+	<table>
+		<tbody>
+			{{ form }}
+		</tbody>
+	</table>
+	<input type='submit' value='Cadastrar Autor'>
+</form>
+
+{% endblock content %}

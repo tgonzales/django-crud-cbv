@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Lista de Livros</h1><br>
+
+{% for livro in object_list %}
+<p> {{ livro.title }} 
+	| <a href='{{ livro.get_absolute_url }}'>detalhes Nª {{ livro.get_absolute_url }}</a> 
+	| <a href='{{ livro.get_absolute_url }}atualizar'>Atualizar </a>
+	| <a href='{{ livro.get_absolute_url }}apagar'>Apagar </a>
+</p>
+
+{% empty %}
+	<h2>Não há livros cadastrados no momento</h2>
+
+{% endfor%}
+
+{% endblock content %}

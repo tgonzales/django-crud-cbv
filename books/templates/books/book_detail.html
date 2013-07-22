@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>{{ book.title }}</h1><br>
+
+<p> {{ book.author }} </p>
+<p> {{ book.release }} </p>
+
+{% if book.available %}
+<p> Disponível </p>
+{% else %}
+<p> Indisponível </p>
+{% endif %}
+
+{% endblock content %}
